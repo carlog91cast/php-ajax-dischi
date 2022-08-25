@@ -23,20 +23,29 @@
     <h4>{{ songCard.author }}</h4>
     <h5>{{ songCard.year }}</h5>
 </div> -->
-    <div class="container">
-        <div class="row">
-            <div class="col-12 mt-4">
+    <header>
+        <div class="spotify-logo">
+            <img class="w-100" src="./img/Spotify_logo_without_text.svg.png" alt="spotify logo">
+        </div>
+    </header>
+    <main>
+        <div class="main-wrapper">
+            <div class=" d-flex flex-wrap mt-4">
                 <?php
                 include __DIR__ . '/json.php';
                 foreach ($albums as $album) { ?>
-                    <img src="<?php echo $album['poster']?>" alt="">
-                    <h3><?php echo $album['title'] ?></h3>
-                    <h4><?php echo $album['author'] ?></h4>
-                    <h5><?php echo $album['year'] ?></h5>
+                    <div class="song-card m-2">
+                        <img class="w-100" src="<?php echo $album['poster'] ?>" alt="">
+                        <h3><?php echo $album['title'] ?></h3>
+                        <h4><?php echo $album['author'] ?></h4>
+                        <h5><?php echo $album['year'] ?></h5>
+                    </div>
                 <?php } ?>
             </div>
         </div>
-    </div>
+    </main>
+
+
 
 
     <script src="js/main.js"></script>
