@@ -26,9 +26,13 @@
     <div class="container">
         <div class="row">
             <div class="col-12 mt-4">
-                <?php foreach ($faqs as $faq) { ?>
-                    <h3><?php echo $faq['question'] ?></h3>
-                    <p><?php echo $faq['answer'] ?></p>
+                <?php
+                include __DIR__ . '/json.php';
+                foreach ($albums as $album) { ?>
+                    <img src="<?php echo $album['poster']?>" alt="">
+                    <h3><?php echo $album['title'] ?></h3>
+                    <h4><?php echo $album['author'] ?></h4>
+                    <h5><?php echo $album['year'] ?></h5>
                 <?php } ?>
             </div>
         </div>
