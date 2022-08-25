@@ -1,6 +1,6 @@
 <?php
-require __DIR__ . '/json.php';
+include __DIR__ . '/json.php';
 
 header('Content-Type: applicatione/json');
-echo json_encode($database);
+echo json_encode($albums);
 ?>

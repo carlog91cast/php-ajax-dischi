@@ -12,7 +12,7 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.20.0/axios.min.js"></script>
 </head>
 <body>
-  <div class="song-card">
+  <!-- <div class="song-card">
     <div class="song-img">
         <img :src="songCard.poster" alt="">
     </div>
@@ -20,7 +20,24 @@
     <h3>{{ songCard.title }}</h3>
     <h4>{{ songCard.author }}</h4>
     <h5>{{ songCard.year }}</h5>
-</div>
+</div> -->
+<header>
+  <div class="spotify-logo">
+      <img class="w-100" src="./img/Spotify_logo_without_text.svg.png" alt="spotify logo">
+  </div>
+</header>
+<main>
+  <div class="main-wrapper">
+      <div class=" d-flex flex-wrap mt-4">
+          <div v-for="album in albums" class="song-card m-2">
+              <img class="w-100" :src="" alt="">
+              <h3>{{album.author}}</h3>
+              <h4></h4>
+              <h5></h5>
+          </div>
+      </div>
+  </div>
+</main>
   
     
   <script src="js/main.js"></script>

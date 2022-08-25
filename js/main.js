@@ -6,8 +6,18 @@ var app = new Vue(
         data: {
             albums: []
         },
-        mounted(){
-
+        methods: {
+            getAlbums() {
+                axios.get('http://localhost:8888/php-ajax-dischi/api.php')
+                    .then((result) => {
+                        this.albums = result;
+                        // this.database = response.data;
+                    });
+            }
+        },
+        created: function(){
+            this.getAlbums();
         }
+
     }
 )
