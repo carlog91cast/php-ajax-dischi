@@ -1,4 +1,3 @@
-vue.config.devtools = true
 
 var app = new Vue(
     {
@@ -8,10 +7,10 @@ var app = new Vue(
         },
         methods: {
             getAlbums() {
-                axios.get('http://localhost:8888/php-ajax-dischi/api.php')
-                    .then((result) => {
-                        this.albums = result;
-                        // this.database = response.data;
+                axios.get('http://localhost:8888/php-ajax-dischi/json.php')
+                    .then(result => {
+                        this.albums = result.data.results.data;
+                        console.log(this.albums)
                     });
             }
         },
